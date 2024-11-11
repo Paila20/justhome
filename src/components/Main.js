@@ -346,7 +346,9 @@ const Main = () => {
            
             </div>
             <div>
+              <a href="#homepage">
             <button className='rounded border-0 px-3 py-2 ' style={{background:"#E7C873"}}>Learn More <FaArrowRight/></button>
+            </a>
             </div>
            
           </div>
@@ -449,7 +451,7 @@ const Main = () => {
             <h2>Become a Real Estate Agent</h2>
             <h5>We only work with the best companies around the globe</h5>
           </div>
-          <a href="/" >
+          <a href="#homepage" >
           <button className='rounded border-0 px-3 py-2 ' style={{background:"#E7C873"}}>Register Now <FaArrowRight/></button>
           </a>
     </div>
