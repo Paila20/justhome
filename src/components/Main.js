@@ -117,7 +117,7 @@ const Main = () => {
                 </div>
        </section>
        <section className='container-fluid-lg bg-category  px-5 py-1'>
-        <div className='  m-md-5 px-md-5 py-5  '>
+        <div className='  m-md-5 px-md-5 py-5 mx-auto  '>
         <div className='d-flex flex-column  '>
             <h2>Featured Categories</h2>
             <div className='d-flex justify-content-between'>
@@ -142,7 +142,7 @@ const Main = () => {
        </section>
 
        <section className='container-fluid-lg   px-5 ' id="listings">
-        <div className=' m-md-5 px-md-5 pt-5  '>
+        <div className=' m-md-5 px-md-5 pt-5  mx-auto '>
         <div className='d-flex flex-column  '>
             <h2>Discover Our Best Deals</h2>
             <div className='d-flex justify-content-between'>
@@ -383,7 +383,9 @@ const Main = () => {
     <h1 className="text-center">Have More Questions?</h1>
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
-  <div className="accordion border-0 w-50 mx-auto mt-4 mb-5" id="accordionExample">
+  <div className="row justify-content-center">
+  <div className="col-lg-6 col-12 col-sm-9"> 
+  <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
       <h2 className="accordion-header" id="headingOne">
         <button className="accordion-button fs-5 fw-bold text-dark mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -445,7 +447,9 @@ const Main = () => {
       </div>
     </div>
   </div>
-  <div className='container-fluid-lg p-5  ' style={{background:"#FFF8F6"}}>
+  </div>
+  </div>
+  <div className='container-fluid-lg p-md-5 p-sm-0  ' style={{background:"#FFF8F6"}}>
     <div className='d-flex justify-content-between p-5 mx-5  flex-md-row flex-column gap-5'>
           <div>
             <h2>Become a Real Estate Agent</h2>
@@ -532,19 +536,6 @@ const Main = () => {
             
           </div>
 
-          {/* <div className="d-flex flex-column gap-3 flex-grow-1">
-            <h3 className="fs-5 text-gray">Discover</h3>
-            {["Miami", "New York", "Chicago", "Florida", "Los Angeles", "San Diego"].map((city) => (
-              <a href="/" key={city} className="fs-6"  style={{ textDecoration: "none", color: "white" }}>{city}</a>
-            ))}
-          </div>
-
-          <div className="d-flex flex-column gap-3 flex-grow-1">
-            <h3 className="fs-5 text-gray">Quick Links</h3>
-            {["About", "Contact", "FAQ's", "Blog", "Pricing Plans", "Privacy Policy", "Terms & Conditions"].map((link) => (
-              <a href={`#${link.toLowerCase().replace(" ", "")}`} key={link} className="fs-6"  style={{ textDecoration: "none", color: "white" }}>{link}</a>
-            ))}
-          </div> */}
 
           <div className="d-flex flex-column gap-3 flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Contact Us</h3>
