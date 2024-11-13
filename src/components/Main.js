@@ -4,7 +4,7 @@ import { featurearray } from '../Constants';
 import { imagearray1 } from '../Constants';
 import { imagearray2 } from '../Constants';
 import { expertimagearray } from '../Constants';
-import Icon5 from "../assets/locationicon.png";
+import location from "../assets/location.png";
 import bedicon from "../assets/bedicon.png";  
 import bath from "../assets/bath.png";
 import room from "../assets/room.png";
@@ -33,10 +33,14 @@ import instagram from "../assets/instagram.png";
 import applestore from "../assets/applestore.png";
 import linkedin from "../assets/linkedin.png";
 import googlepay from "../assets/googlepay.png";
+import button1 from "../assets/button1.png";
+import button2 from "../assets/button2.png";
+import group from "../assets/group.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight } from 'react-icons/fa';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Main = () => {
 
@@ -101,14 +105,14 @@ const Main = () => {
 
   return (
     <div>
-       <section className='container py-5 ' id="home">
+       <section className='container py-2  py-md-5' id="home">
         <div className='text-center py-5 '>
             <h2>How It works? Find a perfect home</h2>
             <h6 className='fs-6 display-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
         </div>
        <div className="  d-flex   justify-content-center align-items-center gap-5 flex-sm-wrap flex-wrap flex-lg-nowrap pb-5 ">
        {iconarray.map((card, index) => (
-                <div className="card-body text-center  " key={index}>
+                <div className="card-body text-center w-sm-70 " key={index}>
                     <img src={card.src} alt={card.title} className="img-fluid" />
                     <h4 className='pt-3 pb-2'>{card.title}</h4>
                     <h5 className='fs-6 display-3'>Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco</h5>
@@ -116,9 +120,9 @@ const Main = () => {
                 ))}
                 </div>
        </section>
-       <section className='container-fluid-lg bg-category  px-5 py-1'>
-        <div className='  m-md-5 px-md-5 py-5 mx-auto  '>
-        <div className='d-flex flex-column  '>
+       <section className='container-fluid-lg bg-category  px-5 py-md-1 py-2'>
+        <div className='  m-md-5 px-md-5  py-5 mx-auto  '>
+        <div className='d-flex flex-column px-3 '>
             <h2>Featured Categories</h2>
             <div className='d-flex justify-content-between'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -141,9 +145,9 @@ const Main = () => {
 
        </section>
 
-       <section className='container-fluid-lg   px-5 ' id="listings">
-        <div className=' m-md-5 px-md-5 pt-5  mx-auto '>
-        <div className='d-flex flex-column  '>
+       <section className='container-fluid-lg  px-5 py-md-5 py-3 ' id="listings">
+        <div className='  mx-md-5 px-md-5  mx-auto  py-5'>
+        <div className='d-flex flex-column px-3 '>
             <h2>Discover Our Best Deals</h2>
             <div className='d-flex justify-content-between'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -155,13 +159,13 @@ const Main = () => {
         </div>
       
   <div className=" row  ">
-    <Slider {...settings1} className="  pt-3 pb-5 mb-5 h-auto">
+    <Slider {...settings1} className="  pt-3 pb-5  h-auto">
       {imagearray1.map((card, index) => (
         <div
           className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center px-0  "
           key={index}
         >
-          <div className="card border-0 d-flex flex-column mx-3 " style={{ width: '450px',height:"auto" }}>
+          <div className="card border-0 d-flex flex-column mx-3 " style={{ width: '430px',height:"auto" }}>
             <div className="card-img-top aspect-ratio-1x1">
               <img src={card.src} alt={card.title} className="img-fluid " />
             </div>
@@ -169,10 +173,13 @@ const Main = () => {
               <div className="d-flex">
                 <h2 className="fs-5">{card.title}</h2>
               </div>
-              <div className="d-flex gap-2 mb-2">
-                <img src={Icon5}  alt="icon5" className="" />
-                
-                  <h5 className="fs-6">{card.location}</h5>
+              <div className="d-flex gap-2 mb-2 align-items-center ">
+                <img src={location}  alt="icon5" className=" w-10 h-10" />
+               
+
+                {/* <i className="bi bi-geo-alt medium-icon"style={{ fontSize: '26px' }} ></i> */}
+
+                  <h5 className="fs-6 mt-2">{card.location}</h5>
               
               </div>
               <div className='d-flex justify-content-between border-top border-gray pt-3'>
@@ -191,9 +198,9 @@ const Main = () => {
   </div>
 </div>
 </section>
-<section className='container-fluid-lg p-4 m-4  text-center' style={{background:"#E7C873"}}>
- <div className='d-flex justify-content-between   align-items-center   flex-column flex-lg-row gap-5 py-5 px-5'>
-  <div className='ps-lg-3  ms-lg-3'>
+<section className='container-fluid-lg p-2 p-sm-4  mx-4 my-3 rounded-3 ' style={{background:"#E7C873"}}>
+ <div className='d-flex justify-content-between   align-items-center   flex-column flex-lg-row gap-5 py-5 px-lg-5 p-1'>
+  <div className='ps-lg-3 ps-0 ms-0 ms-lg-3'>
     <h2>Take a look at our numbers</h2>
     <h6>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h6>
 
@@ -208,14 +215,14 @@ const Main = () => {
     <h2>50M+</h2>
     <h6>In property sales</h6>
    </div>
-   <div className='d-flex flex-column align-items-center'>
+   <div className='d-flex flex-column '>
     <h2>2,600+</h2>
     <h6>Successful sales</h6>
    </div>
   </div>
  </div>
 </section>
-<section className='container-fluid-lg    px-5 ' id="blog">
+<section className='container-fluid-lg    px-5  ' id="blog">
         <div className='  m-md-5 px-md-5 pt-5 '>
         <div className='d-flex flex-column  '>
             <h2>Find Properties in These Cities</h2>
@@ -243,7 +250,7 @@ const Main = () => {
        
      
       </div>
-      <div className='my-4 text-center pt-5 pb-5 mb-4'>
+      <div className='my-md-4 text-center pt-5 pb-5 my-1 '>
         <h4>Thousands of worlds leading companies trust Space</h4>
         <div className=' container mt-5 d-flex gap-5 justify-content-center align-items-center  flex-lg-row flex-wrap mb-4 text-center '>
         <img src={image10} alt="image10" className='img-fluid '/>
@@ -255,9 +262,9 @@ const Main = () => {
         </div>
         </div>
         </section>
-        <section className='container-fluid-lg px-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
-        <div className='  m-md-5 px-md-5 pb-5'>
-        <div className='d-flex flex-column '>
+        <section className='container-fluid-lg px-5 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
+        <div className='  m-md-5 px-md-5 py-md-1 py-3'>
+        <div className='d-flex flex-column  px-3'>
             <h2>Discover Our Best Deals</h2>
             <div className='d-flex justify-content-between'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -269,7 +276,7 @@ const Main = () => {
         </div>
       
   <div className=" row ">
-    <Slider {...settings} className="  pt-3 pb-5 mb-5 h-auto carousel2"  style={{background:"#1F4B43",color:"white"}}>
+    <Slider {...settings} className="  pt-3 pb-5  h-auto carousel2"  style={{background:"#1F4B43",color:"white"}}>
       {imagearray2.map((card, index) => (
         <div
           className="col-12 col-sm-16 col-md-4 col-lg-4 d-flex justify-content-center align-items-center   " style={{border:"none"}}
@@ -283,10 +290,10 @@ const Main = () => {
               <div className="d-flex mt-3">
                 <h2 className="fs-6 fw-medium">{card.title}</h2>
               </div>
-              <div className="d-flex gap-2 mb-2">
+              <div className="d-flex gap-2 mb-2 align-items-center">
                 <img src={locationicon2}  alt="icon5" className="img-fluid" />
                 
-                  <h6 className="fs-6 fw-light">{card.location}</h6>
+                  <h6 className="fs-6 fw-light mt-1">{card.location}</h6>
               
               </div>
               <div className='d-flex justify-content-between border-top border-gray pt-3'>
@@ -305,13 +312,13 @@ const Main = () => {
   </div>
 </div>
 </section>
-<section className='container  py-5  text-center ' id="members">
-  <div className='d-flex flex-column justify-content-center align-items-center'>
+<section className='container  py-md-5 py-2 text-center ' id="members">
+  <div className='d-flex flex-column justify-content-center align-items-center py-5'>
         <div className='text-center pb-4'>
             <h2>Meet Our Team Of Experts</h2>
             <h6 className='fs-6 display-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
         </div>
-       <div className="  d-flex   gap-4 flex-column flex-lg-row flex-wrap flex-lg-nowrap pb-5 mx-5  ">
+       <div className="  d-flex   gap-4 flex-column flex-lg-row flex-wrap flex-lg-nowrap  mx-5  ">
        {expertimagearray.map((card, index) => (
                 <div className="card-body d-flex flex-column text-start" key={index}>
                     <img src={card.src} alt={card.title} className="img-fluid rounded-3" />
@@ -324,17 +331,17 @@ const Main = () => {
        </section>
 
       <section className='container-fluid-lg  ' style={{background: "#FFF8F6"}}>
-        <div className='d-flex  justify-content-center align-items-center flex-lg-row flex-column gap-5'>
+        <div className=' row   py-lg-0 '>
           <div className='col-lg-6'>
             <img src={image16} alt="image16" className='img-fluid '/>
           </div>
-          <div className=' col-lg-6 d-flex flex-column gap-3 justify-content-center align-items-start  px-5 me-5 py-5' >
-            <div className='d-flex flex-column '>
+          <div className=' col-lg-5   col-sm-10 col-md-10 col-12 d-flex flex-column gap-3 justify-content-center mx-auto py-5 mt-4  px-4 px-lg-0 px-sm-2 px-md-3 ' >
+            <div className='  d-flex flex-column px-sm-5 px-3 px-lg-0'>
             <h2>Why You Should Work
                With Us</h2>
             <h6 className='fs-6 '>Pellentesque egestas elementum egestas facilisis sem. Velit nunc egestas ut morbi. Leo id nibh eget fermentum massa pretium. Mi mauris nulla aliquam ut mauris nunc.</h6>
             </div>
-            <div className='d-flex gap-3'>
+            <div className='d-flex gap-3 px-sm-5 px-3 px-lg-0'>
               <div  className='col-lg-6'>
                <h4>Buy or Rent Homes</h4>
                <h6>We sell your home at the best market price and very quickly as well</h6>
@@ -347,7 +354,7 @@ const Main = () => {
             </div>
             <div>
               <a href="#homepage">
-            <button className='rounded border-0 px-3 py-2 ' style={{background:"#E7C873"}}>Learn More <FaArrowRight/></button>
+            <button className='rounded border-0 px-3 py-2 mx-sm-5 mx-3 mx-lg-0 ' style={{background:"#E7C873"}}>Learn More <FaArrowRight/></button>
             </a>
             </div>
            
@@ -355,36 +362,55 @@ const Main = () => {
     
         </div>
       </section>
-      <section className='container-fluid-lg py-5' style={{background: "#1A1A1A"}}>
-        
-      <div className='d-flex  justify-content-center align-items-center flex-lg-row flex-column gap-4 px-5 m-5'>
-        <div className='col-lg-6 d-flex flex-column gap-4  mx-5'>
-          <div className='d-flex gap-3 align-items-center'>
-            <img src={image9} alt="image9" className='img-fluid'/>
-            <div className='text-white'>
-              <h2>Cameron Williamson</h2>
+      
+
+<section className="container-fluid-lg py-5" style={{ background: "#1A1A1A" }}>
+  <div className="container"> {/* Adds equal spacing on both sides */}
+    <div className="row">
+      
+      <div className="col-lg-6 col-12 d-flex flex-column gap-4 m-auto  px-4 px-sm-4 px-md-5  text-start">
+        <div className="d-flex justify-content-between align-items-center gap-5 ">
+          <div className="d-flex gap-3 align-items-center  justify-content-start">
+            <img src={image9} alt="image9" className="img-fluid" />
+            <div className="text-white">
+              <h4>Cameron Williamson</h4>
               <h6>Designer</h6>
             </div>
-
           </div>
-          <h5 className='text-white fs-6 display-1 me-5'>Searches for multiplexes,property comparisions, and the loan
-           estimator.Works great.Lorem ipsum dolor sit amet
-          consectetur adipiscing elite, sed do eiudsmon tempor incididunt ut labour et dores.
+          <div className="mt-3 mt-md-0">
+            <img src={group} alt="group" />
+          </div>
+        </div>
+
+        <h5 className="text-white fs-6 me-0 me-md-5">
+          Searches for multiplexes, property comparisons, and the loan estimator. Works great. Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
         </h5>
+
+        <div className="d-flex  justify-content-start gap-0">
+          <button className="btn bg-transparent">
+            <img src={button1} alt="button1" />
+          </button>
+          <button className="btn bg-transparent">
+            <img src={button2} alt="button2" />
+          </button>
         </div>
-        <div className='col-lg-6 pe-5  py-5 '>
-          <img src={image17} alt="image17" className='img-fluid '/>
-        </div>
-        </div>
-        
-      </section>
+      </div>
+
+      <div className="col-lg-6 col-12 text-center py-5">
+        <img src={image17} alt="image17" className="img-fluid" />
+      </div>
+      
+    </div>
+  </div>
+</section>
+
       <section className="container-fluid-lg pt-5 mt-5">
   <div>
     <h1 className="text-center">Have More Questions?</h1>
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
   <div className="row justify-content-center">
-  <div className="col-lg-6 col-12 col-sm-9"> 
+  <div className="col-lg-6 col-9 "> 
   <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
       <h2 className="accordion-header" id="headingOne">
@@ -449,8 +475,8 @@ const Main = () => {
   </div>
   </div>
   </div>
-  <div className='container-fluid-lg p-md-5 p-sm-0  ' style={{background:"#FFF8F6"}}>
-    <div className='d-flex justify-content-between p-5 mx-5  flex-md-row flex-column gap-5'>
+  <div className='container-fluid-lg p-md-5 py-5 px-md-5 px-sm-5 ' style={{background:"#FFF8F6"}}>
+    <div className='d-flex justify-content-between p-md-5 mx-5  flex-md-row flex-column gap-5'>
           <div>
             <h2>Become a Real Estate Agent</h2>
             <h5>We only work with the best companies around the globe</h5>
@@ -462,8 +488,8 @@ const Main = () => {
    </div>
 </section>
 
-<section className="container-fluid px-5" style={{ background: "#1F4B43", color: "white" }} id="contact">
-      <div className="d-flex flex-column px-5">
+<section className="container-fluid px-md-5 px-1 pt-4 pt-sm-0 " style={{ background: "#1F4B43", color: "white" }} id="contact">
+      <div className="d-flex flex-column px-5 ">
         <div className="d-flex flex-wrap justify-content-between  border-bottom border-light align-items-center">
           <div className="d-flex gap-3">
             <img src={Vector} alt="logo" className="img-fluid" />
@@ -481,13 +507,13 @@ const Main = () => {
         <div className="d-flex flex-wrap flex-lg-nowrap gap-5 mx-auto my-5 pb-5 border-bottom border-light" id="contact">
           <div className="flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Subscribe</h3>
-            <div className="d-flex justify-content-between my-4">
-              <h4 className="fs-6 display-1">Your Email</h4>
-              <button className="border-0 rounded-4 px-3 pb-1 text-white" style={{ backgroundColor: "gray" }}>
+            <div className="d-flex justify-content-between ">
+              <input placeholder='Your email' className=" border-0 text-white"  style={{ background: "#1F4B43", color: "white" }}/>
+              <button className="border-0 rounded-4 px-3  text-white" style={{ backgroundColor: "gray" }}>
                 Send <FaArrowRight />
               </button>
             </div>
-            <h4 className="fs-6 display-1">Subscribe to our newsletter to receive our weekly feed</h4>
+            <h4 className="fs-6 display-1 border-top border-gray pt-3">Subscribe to our newsletter to receive our weekly feed</h4>
           </div>
         
           <div  className='d-flex flex-column gap-3 flex-grow-1'>
