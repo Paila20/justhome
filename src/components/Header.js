@@ -50,10 +50,10 @@ const Header = () => {
                 Home
                 </a>
                 <ul class="dropdown-menu  border-0 navbar-dropdown bg-dark text-white" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                  <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                  <li><a class="dropdown-item text-white" href="#home">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#home">Another action</a></li>
                   
-                  <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item text-white" href="#home">Something else here</a></li>
                 </ul>
               </li>
                       <li class="nav-item dropdown">
@@ -62,10 +62,10 @@ const Header = () => {
                 Listings
                 </a>
                 <ul class="dropdown-menu  border-0 bg-dark" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                  <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                  <li><a class="dropdown-item text-white" href="#listings">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#listings">Another action</a></li>
                   
-                  <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item text-white" href="#listings">Something else here</a></li>
                 </ul>
               </li>
                 <li className="nav-item">
@@ -136,10 +136,10 @@ const Header = () => {
                 </button>
  
   <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+  <li><a class="dropdown-item" href="#members">Action</a></li>
+                  <li><a class="dropdown-item" href="#members">Another action</a></li>
                   
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#members">Something else here</a></li>
   </ul>
 </div>
               </div>
