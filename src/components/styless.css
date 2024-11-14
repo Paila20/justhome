@@ -28,6 +28,12 @@
 
     color: white;
 }
+/* .logo{
+  margin-right: -5rem;
+} */
+.ul-menu{
+  margin-left: -15rem;
+}
 .bg-gray {
     color: gray;
     z-index: 10;
@@ -78,7 +84,7 @@
    background-color: gray;
    border-radius: 50%;
   }
-  /* .carousel2 .slick-dots {
+  .carousel2 .slick-dots {
     position: absolute;
    color: #F9F9F9;
     display: flex !important;
@@ -96,11 +102,15 @@
     color: white;
     opacity: 5;
 }
+.carousel2 .slick-dots li.slick-active button:before{
+  color: white;
+  opacity: 5;
+}
 .carousel2  .slick-dots li.slick-active button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-
+   
     border-left:  1px solid #f9f9f9;
     border-right:  1px solid #f9f9f9;
     border:1px solid #F9F9F9;
@@ -109,13 +119,31 @@
     border: none;
    }
  .carousel2  .slick-dots li button:hover{
-    background-color: #f9f9f9;
+    background-color:lightgrey;
     border-radius: 50%;
-   } */
+   }
 .navbar{
   background-color: black;
 }
    
+.navbar-toggler{
+  box-shadow: none;
+  
+}
+.navbar-toggler:focus{
+box-shadow: none;
+}
+.input-email::placeholder{
+  color: white;
+}
+.navbar-nav .dropdown-menu {
+  position: absolute;
+
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent !important; 
+  color: #ffffff;
+}
 
 @media screen and (max-width:1200px){
  
@@ -127,7 +155,21 @@
     }
     .navbar > div{
       display: flow;
+      
     }
+    .number{
+      display: none;
+    }
+    .navbar-nav .dropdown-menu {
+      position: absolute;
+      width: 80vw;
+    
+    }
+    /* .navbar-dropdown{
+      width: 100vw;
+    } */
+  
+  
     
 }
 /* @media screen and (max-width:990px){
@@ -187,9 +229,12 @@
     align-items: start; 
     text-align: left;
   }
+  .bottom-menu{
+    margin-left: 2rem;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
 
 .propertyimage{
   display: none;
@@ -199,6 +244,34 @@
 }
 .fs-md-1{
 
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 }
+
+@media screen and (max-width: 780px) {
+  .bottom-menu{
+    /* flex-direction: column; */
+    align-items:center;
+    gap: 1rem;
+
+  }
+  .header-h6{
+
+    font-size: 0.9rem;
+  }
+}
+  
+  @media screen and (max-width: 450px) {
+    .fs-md-1{
+      font-size: 1.5rem;
+    }
+    .header-h6{
+
+      font-size: 0.7rem;
+    }
+    .bottom-menu{
+      flex-direction: column;
+      align-items:baseline;
+      gap: 1rem;
+    }
+  }

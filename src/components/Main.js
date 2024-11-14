@@ -132,9 +132,9 @@ const Main = () => {
             </div>
            
         </div>
-                    <div className=" container  d-flex   gap-3   align-items-center justify-content-center  flex-lg-row flex-wrap flex-lg-nowrap  pb-3 mt-3 text-center">
+                    <div className=" container  d-flex   gap-3 align-items-center justify-content-center  flex-lg-row  flex-md-wrap flex-wrap flex-lg-nowrap  pb-3 mt-3 text-center">
                 {featurearray.map((card, index) => (
-                <div className="card text-center border-0 d-flex flex-column align-items-center justify-content-center " key={index} style={{ width: '214px', height: '240px' }}>
+                <div className="card text-center border-0 d-flex flex-column align-items-center justify-content-center " key={index} style={{ width: '214px', height: '240px',minWidth:"150px" }}>
                     <img src={card.src} alt={card.title} className="img-fluid" />
                     <h4 className=''>{card.title}</h4>
                     <h5 className='fs-6 display-3'>{card.desc}</h5>
@@ -171,7 +171,7 @@ const Main = () => {
             </div>
             <div className="card-body p-0">
               <div className="d-flex">
-                <h2 className="fs-5">{card.title}</h2>
+                <h2 className="fs-5 mt-3">{card.title}</h2>
               </div>
               <div className="d-flex gap-2 mb-2 align-items-center ">
                 <img src={location}  alt="icon5" className=" w-10 h-10" />
@@ -183,7 +183,7 @@ const Main = () => {
               
               </div>
               <div className='d-flex justify-content-between border-top border-gray pt-3'>
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-md-3 gap-0">
                 <h5 className="d-flex fs-6 display-1 gap-1 pe-2 border-end border-gray"><img src={bedicon} alt="bedicon"/> 4</h5>
                 <h5 className="d-flex fs-6 gap-1  display-1  pe-2 border-end border-gray"><img src={bath} alt="bath"/> 2</h5>
                 <h5 className="d-flex fs-6 display-1  gap-1"><img src={room} alt="room"/> 450</h5>
@@ -279,7 +279,7 @@ const Main = () => {
     <Slider {...settings} className="  pt-3 pb-5  h-auto carousel2"  style={{background:"#1F4B43",color:"white"}}>
       {imagearray2.map((card, index) => (
         <div
-          className="col-12 col-sm-16 col-md-4 col-lg-4 d-flex justify-content-center align-items-center   " style={{border:"none"}}
+          className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center   " style={{border:"none"}}
           key={index}
         >
           <div className="card border-0 d-flex flex-column mx-3" style={{ width: '420px',height:"auto",borderLeft:"none"}}>
@@ -404,12 +404,12 @@ const Main = () => {
   </div>
 </section>
 
-      <section className="container-fluid-lg pt-5 mt-5">
+      <section className="container-fluid-lg pt-md-5 pt-3 mt-5">
   <div>
     <h1 className="text-center">Have More Questions?</h1>
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
-  <div className="row justify-content-center">
+  <div className="row justify-content-center pb-md-5 pb-3">
   <div className="col-lg-6 col-9 "> 
   <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
@@ -507,9 +507,9 @@ const Main = () => {
         <div className="d-flex flex-wrap flex-lg-nowrap gap-5 mx-auto my-5 pb-5 border-bottom border-light" id="contact">
           <div className="flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Subscribe</h3>
-            <div className="d-flex justify-content-between ">
-              <input placeholder='Your email' className=" border-0 text-white"  style={{ background: "#1F4B43", color: "white" }}/>
-              <button className="border-0 rounded-4 px-3  text-white" style={{ backgroundColor: "gray" }}>
+            <div className="d-flex justify-content-between  pb-2">
+              <input placeholder='Your email' className=" border-0 text-white input-email"  style={{ background: "#1F4B43", color: "white",outline:"none" }}/>
+              <button className="border-0 rounded-4 p-2 px-3  text-white" style={{ background:" rgb(45, 79, 69)",opacity:"5" }}>
                 Send <FaArrowRight />
               </button>
             </div>
@@ -565,8 +565,12 @@ const Main = () => {
 
           <div className="d-flex flex-column gap-3 flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Contact Us</h3>
+            <a href="mailto:rajarajeswari169@gmail.com"  style={{ textDecoration: "none", color: "white" }}>
             <h4 className="fs-6 display-1">hi@justhome.com</h4>
+            </a>
+            <a href="mailto:rajarajeswari169@gmail.com"  style={{ textDecoration: "none", color: "white" }}>
             <h4 className="fs-6 display-1">(123) 456-7890</h4>
+            </a>
           </div>
 
           <div className="d-flex flex-column gap-3 flex-grow-1">
@@ -577,8 +581,12 @@ const Main = () => {
 
           <div className="d-flex flex-column gap-3 flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Get The App</h3>
+            <a href="#home">
             <img src={applestore} alt="applestore" className="img-fluid" />
+            </a>
+            <a href="listings">
             <img src={googlepay} alt="googlepay" className="img-fluid" />
+            </a>
           </div>
         </div>
 
