@@ -1,6 +1,6 @@
 .accordion {
     --bs-accordion-active-bg: #F9F9F9;
-    /* --bs-accordion-active-color: #000000; */
+
     --bs-accordion-btn-focus-box-shadow: none;
   }
 .accordion-item{
@@ -165,37 +165,12 @@ box-shadow: none;
       width: 80vw;
     
     }
-    /* .navbar-dropdown{
-      width: 100vw;
-    } */
+   
   
   
     
 }
-/* @media screen and (max-width:990px){
-  .ul-bg{
- padding-bottom: 30px;
- display: flex;
- justify-self: unset;
- flex-direction: column;
 
-  }
-  
-  .nav-link {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 280%;
-    padding: 8px 0; 
-  }
-
-  .navbar-collapse {
-    width: 100vw; 
-    
-  }
-} */
-
-/* Media Query for screens 990px and below */
 @media screen and (max-width: 990px) {
   .ul-bg {
     padding-bottom: 30px;
@@ -219,7 +194,7 @@ box-shadow: none;
     padding: 8px 20px; 
   }
 
-  /* Additional styling to center and align links with logo and toggle button */
+
   .navbar-collapse {
     width: 100%;
 
@@ -250,7 +225,7 @@ box-shadow: none;
 
 @media screen and (max-width: 780px) {
   .bottom-menu{
-    /* flex-direction: column; */
+   
     align-items:center;
     gap: 1rem;
 

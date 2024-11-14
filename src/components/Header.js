@@ -3,8 +3,7 @@
 import React ,{useState}from 'react';
 import banner from "../assets/banner.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 import { FaTimes,FaBars } from "react-icons/fa";
 import Vector from "../assets/Vector.png";
 import callIcon from "../assets/callIcon.png";
@@ -16,7 +15,7 @@ import "./styless.css";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu state
+ 
   const handleToggle = () => {
     setIsMenuOpen(prevState => !prevState);
   };
@@ -26,7 +25,7 @@ const Header = () => {
         
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-md-4 px-lg-5 px-2 " style={{ position: "absolute", top: 0, width: "100vw",
           zIndex:"30", }}>
-          {/* <div className=""> */}
+    
             <a className="navbar-brand " href="#homepage">
               <div className='d-flex gap-3 align-items-center ps-md-5 ps-5 logo'>
                 <img src={Vector} alt="Logo" style={{ width: "40px", height: "40px" }} />
@@ -90,7 +89,7 @@ const Header = () => {
                 </li>
               </ul>
               
-              {/* Contact & Profile Buttons */}
+             
               <div className="d-flex align-items-md-center  px-sm-5 pe-md-5  ps-5 bottom-menu">
                 <a href="#contact" className="text-white mx-lg-2 mx-md-0 " style={{ textDecoration: "none" }}>
                   <div className='d-flex align-items-center justify-content-center text-center'>   <img src={callIcon} alt="callIcon" /> <p className="number mt-3"> +68 68588666</p></div>
@@ -102,10 +101,10 @@ const Header = () => {
                 <button className="btn text-white border px-lg-2  pe-md-5  py-md-1 px-2 rounded-5 mx-2 addproperty" style={{minWidth:"150px"}}>Add Property</button>
               </div>
             </div>
-          {/* </div> */}
+      
         </nav>
 
-        {/* Content Section */}
+     
         <div className='container w-sm-150 top-sm  ' style={{left:"7%"}}>
           <div className='d-flex flex-column'>
             <button className=' bg-transparent text-white border align-self-start   p-1  rounded guide-button'>LET US GUIDE YOUR HOME</button>
@@ -127,21 +126,19 @@ const Header = () => {
             
               <div className="d-flex flex-column flex-grow-1 align-items-start justify-content-md-start" style={{ maxWidth: "100px" }}>
                 <h6 className="text-muted mb-1 ms-1" style={{ fontSize: "0.75rem" }}>Type</h6>
-                {/* <h5 className="d-flex gap-2 align-items-center justify-content-between" style={{ color: "black", fontSize: "0.75rem" }}>
-                  All Type <FontAwesomeIcon icon={faCaretDown} />
-                </h5> */}
+              
                 <div class="btn-group bg-transparent text-dark border-0">
                 <button class="btn btn-secondary btn-sm dropdown-toggle bg-transparent text-dark border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   All Type
                 </button>
  
-  <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#members">Action</a></li>
-                  <li><a class="dropdown-item" href="#members">Another action</a></li>
-                  
-                  <li><a class="dropdown-item" href="#members">Something else here</a></li>
-  </ul>
-</div>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#members">Action</a></li>
+                                <li><a class="dropdown-item" href="#members">Another action</a></li>
+                                
+                                <li><a class="dropdown-item" href="#members">Something else here</a></li>
+                </ul>
+              </div>
               </div>
 
             <div className='d-flex gap-2 flex-column flex-sm-row'>

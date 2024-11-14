@@ -177,7 +177,7 @@ const Main = () => {
                 <img src={location}  alt="icon5" className=" w-10 h-10" />
                
 
-                {/* <i className="bi bi-geo-alt medium-icon"style={{ fontSize: '26px' }} ></i> */}
+              
 
                   <h5 className="fs-6 mt-2">{card.location}</h5>
               
@@ -365,7 +365,7 @@ const Main = () => {
       
 
 <section className="container-fluid-lg py-5" style={{ background: "#1A1A1A" }}>
-  <div className="container"> {/* Adds equal spacing on both sides */}
+  <div className="container"> 
     <div className="row">
       
       <div className="col-lg-6 col-12 d-flex flex-column gap-4 m-auto  px-4 px-sm-4 px-md-5  text-start">
