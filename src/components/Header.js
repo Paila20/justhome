@@ -98,7 +98,9 @@ const Header = () => {
                 <a href="#home" className="text-white mx-2">
                   <img src={avatar} alt="avatar" />
                 </a>
+                <a  href="contact">
                 <button className="btn text-white border px-lg-2  pe-md-5  py-md-1 px-2 rounded-5 mx-2 addproperty" style={{minWidth:"150px"}}>Add Property</button>
+                </a>
               </div>
             </div>
       

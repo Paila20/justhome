@@ -622,7 +622,7 @@ const Main = () => {
             <h3 className="fs-5 " style={{color:"gray"}}>Subscribe</h3>
             <div className="d-flex justify-content-between  pb-2">
               <input placeholder='Your email' className=" border-0 text-white input-email"  style={{ background: "#1F4B43", color: "white",outline:"none" }}/>
-              <button className="border-0 rounded-4 p-2 px-3  text-white" style={{ background:" rgb(45, 79, 69)",opacity:"5" }}>
+              <button className=" d-flex flex-row border-0 rounded-4 p-2 px-3  text-white align-items-center gap-1" style={{ background:" rgb(45, 79, 69)",opacity:"5", minWidth:"50px" }}>
                 Send <FaArrowRight />
               </button>
             </div>
