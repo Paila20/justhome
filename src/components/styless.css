@@ -15,6 +15,26 @@
 .accordion-item{
     border-bottom: none;
 }
+
+
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+}
+.carousel3 .slick-next:before {
+  content: unset;
+}
+.carousel3 .slick-prev:before {
+  content: unset;
+}
+
 .nav-link{
     color: white;
 }
@@ -28,9 +48,7 @@
 
     color: white;
 }
-/* .logo{
-  margin-right: -5rem;
-} */
+
 .ul-menu{
   margin-left: -15rem;
 }
@@ -40,7 +58,7 @@
 }
 
 .navbar > div {
-    /* background: black; */
+ 
     opacity: 5;
   z-index: 20;
 }
@@ -63,7 +81,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 0px; 
-    top: 90%;
+    top: 100%;
     right: -1%;
     list-style: none;
     padding: 10px;
@@ -144,6 +162,21 @@ box-shadow: none;
   background-color: transparent !important; 
   color: #ffffff;
 }
+.guide-button{
+  font-size: 0.7rem;
+}
+.fs-7{
+  font-size: 0.7rem;
+}
+.card-bg{
+  background:  #1F4B43;
+}
+.card-icon{
+  text-align: center;
+  max-width:300px;
+  min-width: 90px;
+  margin: 0 auto;
+}
 
 @media screen and (max-width:1200px){
  
@@ -207,46 +240,76 @@ box-shadow: none;
   .bottom-menu{
     margin-left: 2rem;
   }
+  .header-h6{
+    font-size: 0.6rem;
+  }
+  .guide-button{
+    font-size: 0.6em;
+  }
+  .fs-md-1{
+
+    font-size: 1.5rem;
+  }
+  .sale{
+    font-size: 0.8rem;
+  }
 }
 
-@media screen and (max-width: 780px) {
 
-.propertyimage{
-  display: none;
-}
-.guide-button{
-  font-size: 0.5em;
-}
-.fs-md-1{
 
-  font-size: 2rem;
-}
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 680px) {
   .bottom-menu{
    
     align-items:center;
     gap: 1rem;
 
   }
-  .header-h6{
+  .type{
+    display: inline;
+  }
+ 
 
-    font-size: 0.9rem;
+  .header-h6{
+    font-size: 0.4rem;
+  }
+  .guide-button{
+    font-size: 0.4em;
+  }
+  .fs-md-1{
+
+    font-size: 1rem;
+  }
+  .sale{
+    font-size: 0.6rem;
+  }
+  .view{
+    font-size: 0.6rem;
+    margin-left: 5px;
   }
 }
   
-  @media screen and (max-width: 450px) {
-    .fs-md-1{
-      font-size: 1.5rem;
-    }
-    .header-h6{
-
-      font-size: 0.7rem;
-    }
+  @media screen and (max-width: 400px) {
+    
     .bottom-menu{
       flex-direction: column;
       align-items:baseline;
       gap: 1rem;
+    }
+    .header-h6{
+      font-size: 0.3rem;
+    }
+    .guide-button{
+      font-size: 0.3em;
+    }
+    .fs-md-1{
+  
+      font-size: 0.7rem;
+    }
+    .sale{
+      font-size: 0.4rem;
+    }
+    .propertyimage{
+      display: none;
+      
     }
   }

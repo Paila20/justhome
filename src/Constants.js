@@ -47,7 +47,7 @@ export const imagearray1=[
 export const imagearray2=[
     { 
         src:image1,
-        title:"Skper Pool Apartment",
+        title:"Skyper Pool Apartment",
         cost: "$2,80000",
         location: "1020 Bloomingdal Ave"
     },

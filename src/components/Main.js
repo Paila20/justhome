@@ -43,6 +43,60 @@ import { FaArrowRight } from 'react-icons/fa';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Main = () => {
+  const CustomPrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <button
+        className={className}
+        onClick={onClick}
+        style={{
+          ...style,
+          display: "block",
+          background: "transparent",
+         
+          color: "white",
+          position: "absolute",
+          bottom: "15px",
+          left: "10px",
+          borderRadius:"10%",
+          top:"100%",
+          zIndex: 5,
+          margin: 0,
+          padding: "5px",
+        }}
+      >
+          <img src={button1} alt="button1" />
+
+      </button>
+    );
+  };
+  const CustomNextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <button
+        className={className}
+        onClick={onClick}
+        style={{
+          ...style,
+          display: "block",
+          background: "transparent",
+          border: "none",
+          color: "white",
+          position: "absolute",
+          top:"100%",
+          bottom: "30px",
+          left: "80px", 
+          zIndex: 5,
+          margin: 0,
+          padding: "5px",
+        }}
+      >
+          <img src={button2} alt="button2" />
+
+      </button>
+    );
+  };
+    
 
   const settings1 = {
     dots: true,
@@ -102,42 +156,68 @@ const Main = () => {
  
       
   };
+  const settings2 = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+   
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+       
+          slidesToShow: 1,
+          slidesToScroll: 1,
+         
+          
+        
+      },
+    ],
+  };
+
 
   return (
     <div>
-       <section className='container py-2  py-md-5' id="home">
-        <div className='text-center py-5 '>
+       <section className='container py-4  py-md-5 text-center' id="home">
+        <div className='text-center py-4 py-md-5'>
             <h2>How It works? Find a perfect home</h2>
-            <h6 className='fs-6 display-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+            <h6 className='fw-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
         </div>
-       <div className="  d-flex   justify-content-center align-items-center gap-5 flex-sm-wrap flex-wrap flex-lg-nowrap pb-5 ">
+       <div className="  d-flex   justify-content-center align-items-center gap-md-2  gap-5 flex-sm-wrap flex-wrap flex-lg-nowrap pb-md-5 pb-4 ">
        {iconarray.map((card, index) => (
-                <div className="card-body text-center w-sm-70 " key={index}>
+              <div className='card-icon'>
+                <div className="card-body  text-center  " key={index}  >
                     <img src={card.src} alt={card.title} className="img-fluid" />
-                    <h4 className='pt-3 pb-2'>{card.title}</h4>
-                    <h5 className='fs-6 display-3'>Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco</h5>
+                    <h4 className='pt-3 pb-2 fs-5'>{card.title}</h4>
+                    <h6 className=' fw-normal'>Sumo petentium ut per, at his wisim utinam adipiscing. Est ei graeco</h6>
+                </div>
                 </div>
                 ))}
                 </div>
        </section>
-       <section className='container-fluid-lg bg-category  px-5 py-md-1 py-2'>
-        <div className='  m-md-5 px-md-5  py-5 mx-auto  '>
+       <section className='container-fluid-lg bg-category px-sm-5 px-1 py-md-5 py-5'>
+        <div className='  m-md-5  px-md-5 mx-auto  '>
         <div className='d-flex flex-column px-3 '>
             <h2>Featured Categories</h2>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
+              <a href="#home" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
+              </a>
               
 
             </div>
            
         </div>
-                    <div className=" container  d-flex   gap-3 align-items-center justify-content-center  flex-lg-row  flex-md-wrap flex-wrap flex-lg-nowrap  pb-3 mt-3 text-center">
+                    <div className=" container  d-flex   gap-3 align-items-center justify-content-center  flex-lg-row  flex-md-wrap flex-wrap flex-lg-nowrap  pb-3 mt-3 text-center mx-auto ">
                 {featurearray.map((card, index) => (
-                <div className="card text-center border-0 d-flex flex-column align-items-center justify-content-center " key={index} style={{ width: '214px', height: '240px',minWidth:"150px" }}>
+                <div className="card text-center border-0 d-flex flex-column align-items-center justify-content-center " key={index} style={{ width: '200px', height: '200px',minWidth:"120px" }}>
                     <img src={card.src} alt={card.title} className="img-fluid" />
-                    <h4 className=''>{card.title}</h4>
-                    <h5 className='fs-6 display-3'>{card.desc}</h5>
+                    <h4 className='fs-6'>{card.title}</h4>
+                    <h5 className='fs-7 display-3'>{card.desc}</h5>
                 </div>
                 ))}
                 </div>
@@ -145,21 +225,22 @@ const Main = () => {
 
        </section>
 
-       <section className='container-fluid-lg  px-5 py-md-5 py-3 ' id="listings">
-        <div className='  mx-md-5 px-md-5  mx-auto  py-5'>
+       <section className='container-fluid-lg  px-sm-5 px-0   py-md-5 py-2 ' id="listings">
+        <div className='  mx-md-5  px-md-5   py-5'>
         <div className='d-flex flex-column px-3 '>
             <h2>Discover Our Best Deals</h2>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
+              <a href="listings" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
-              
+              </a>
 
             </div>
            
         </div>
       
   <div className=" row  ">
-    <Slider {...settings1} className="  pt-3 pb-5  h-auto">
+    <Slider {...settings1} className="  pt-3 pb-md-5 pb-3  h-auto">
       {imagearray1.map((card, index) => (
         <div
           className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center px-0  "
@@ -198,37 +279,39 @@ const Main = () => {
   </div>
 </div>
 </section>
-<section className='container-fluid-lg p-2 p-sm-4  mx-4 my-3 rounded-3 ' style={{background:"#E7C873"}}>
+<section className='container-fluid-lg p-2 p-sm-4  mx-md-5 mx-2 my-3 rounded-3 ' style={{background:"#E7C873"}}>
  <div className='d-flex justify-content-between   align-items-center   flex-column flex-lg-row gap-5 py-5 px-lg-5 p-1'>
   <div className='ps-lg-3 ps-0 ms-0 ms-lg-3'>
     <h2>Take a look at our numbers</h2>
     <h6>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h6>
 
   </div>
-  <div className='d-flex gap-3 pe-lg-3  me-lg-3'>
+  <div className='d-flex gap-md-3  gap-2 pe-lg-3  me-lg-3'>
    
    <div className='d-flex flex-column '>
-    <h2>99%</h2>
+    <h3>99%</h3>
     <h6>Customer satisfaction</h6>
    </div>
    <div className='d-flex flex-column ' >
-    <h2>50M+</h2>
+    <h3>50M+</h3>
     <h6>In property sales</h6>
    </div>
    <div className='d-flex flex-column '>
-    <h2>2,600+</h2>
+    <h3>2,600+</h3>
     <h6>Successful sales</h6>
    </div>
   </div>
  </div>
 </section>
-<section className='container-fluid-lg    px-5  ' id="blog">
-        <div className='  m-md-5 px-md-5 pt-5 '>
-        <div className='d-flex flex-column  '>
+<section className='container-fluid-lg  px-sm-5 px-1 ' id="blog">
+        <div className='  m-md-5 px-md-5  pt-5 '>
+        <div className='d-flex flex-column px-3 '>
             <h2>Find Properties in These Cities</h2>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
+              <a href="pages" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
+              </a>
               
 
             </div>
@@ -262,13 +345,15 @@ const Main = () => {
         </div>
         </div>
         </section>
-        <section className='container-fluid-lg px-5 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
+        <section className='container-fluid-lg px-sm-5 px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
         <div className='  m-md-5 px-md-5 py-md-1 py-3'>
         <div className='d-flex flex-column  px-3'>
             <h2>Discover Our Best Deals</h2>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
+              <a href="pages" style={{textDecoration:"none",color:"white"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
+              </a>
               
 
             </div>
@@ -276,13 +361,13 @@ const Main = () => {
         </div>
       
   <div className=" row ">
-    <Slider {...settings} className="  pt-3 pb-5  h-auto carousel2"  style={{background:"#1F4B43",color:"white"}}>
+    <Slider {...settings} className="  pt-3 pb-5 border-0 h-auto carousel2"  style={{background:"#1F4B43",color:"white",border: "none", boxShadow: "none"}}>
       {imagearray2.map((card, index) => (
         <div
-          className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center   " style={{border:"none"}}
+          className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center " 
           key={index}
         >
-          <div className="card border-0 d-flex flex-column mx-3" style={{ width: '420px',height:"auto",borderLeft:"none"}}>
+          <div className="card card-bg  d-flex flex-column mx-3 border-0" style={{ width: '400px',height:"auto"}}>
             <div className="card-img-top aspect-ratio-1x1"  style={{background:"#1F4B43",color:"white"}}>
               <img src={card.src} alt={card.title} className="img-fluid " />
             </div>
@@ -293,16 +378,16 @@ const Main = () => {
               <div className="d-flex gap-2 mb-2 align-items-center">
                 <img src={locationicon2}  alt="icon5" className="img-fluid" />
                 
-                  <h6 className="fs-6 fw-light mt-1">{card.location}</h6>
+                  <h6 className="fs-7 fw-light mt-1">{card.location}</h6>
               
               </div>
-              <div className='d-flex justify-content-between border-top border-gray pt-3'>
+              <div className='d-flex justify-content-between align-items-center border-top border-gray pt-3'>
               <div className="d-flex gap-1">
-                <h5 className="d-flex fs-6 display-1 gap-1 pe-2 border-end border-gray"><img src={bedicon2} alt="bedicon" className="img-fluid"/> 4</h5>
-                <h5 className="d-flex fs-6 gap-1  display-1  pe-2 border-end border-gray"><img src={bathicon2} alt="bath" className="img-fluid"/> 2</h5>
-                <h5 className="d-flex fs-6 display-1  gap-1"><img src={roomicon2} alt="room" className="img-fluid"/> 450</h5>
+                <h5 className="d-flex fs-7 display-1 gap-1 pe-2 border-end border-gray align-items-center"><img src={bedicon2} alt="bedicon" className="img-fluid"/> 4</h5>
+                <h5 className="d-flex fs-7 gap-1  display-1  pe-2 border-end border-gray align-items-center"><img src={bathicon2} alt="bath" className="img-fluid"/> 2</h5>
+                <h5 className="d-flex fs-7 display-1  gap-1 align-items-center"><img src={roomicon2} alt="room" className="img-fluid"/> 450</h5>
               </div>
-              <h6 className="fs-6 fw-light" >{card.cost}</h6>
+              <h6 className="fs-7 fw-light" >{card.cost}</h6>
               </div>
             </div>
           </div>
@@ -331,12 +416,12 @@ const Main = () => {
        </section>
 
       <section className='container-fluid-lg  ' style={{background: "#FFF8F6"}}>
-        <div className=' row   py-lg-0 '>
+        <div className=' row   '>
           <div className='col-lg-6'>
             <img src={image16} alt="image16" className='img-fluid '/>
           </div>
-          <div className=' col-lg-5   col-sm-10 col-md-10 col-12 d-flex flex-column gap-3 justify-content-center mx-auto py-5 mt-4  px-4 px-lg-0 px-sm-2 px-md-3 ' >
-            <div className='  d-flex flex-column px-sm-5 px-3 px-lg-0'>
+          <div className=' col-lg-5   col-sm-10 col-md-10 col-12 d-flex flex-column gap-3 justify-content-center mx-auto py-sm-5  py-3 mt-4  px-4 px-lg-0 px-sm-2 px-md-5 ' >
+            <div className='  d-flex flex-column px-sm-5 px-3 px-lg-0 '>
             <h2>Why You Should Work
                With Us</h2>
             <h6 className='fs-6 '>Pellentesque egestas elementum egestas facilisis sem. Velit nunc egestas ut morbi. Leo id nibh eget fermentum massa pretium. Mi mauris nulla aliquam ut mauris nunc.</h6>
@@ -354,7 +439,7 @@ const Main = () => {
             </div>
             <div>
               <a href="#homepage">
-            <button className='rounded border-0 px-3 py-2 mx-sm-5 mx-3 mx-lg-0 ' style={{background:"#E7C873"}}>Learn More <FaArrowRight/></button>
+            <button className='rounded border-0 px-3 py-2 mx-sm-5 mx-3 mx-lg-0 mb-4  ' style={{background:"#E7C873"}}>Learn More <FaArrowRight/></button>
             </a>
             </div>
            
@@ -364,52 +449,71 @@ const Main = () => {
       </section>
       
 
+
 <section className="container-fluid-lg py-5" style={{ background: "#1A1A1A" }}>
-  <div className="container"> 
-    <div className="row">
-      
-      <div className="col-lg-6 col-12 d-flex flex-column gap-4 m-auto  px-4 px-sm-4 px-md-5  text-start">
-        <div className="d-flex justify-content-between align-items-center gap-5 ">
-          <div className="d-flex gap-3 align-items-center  justify-content-start">
-            <img src={image9} alt="image9" className="img-fluid" />
-            <div className="text-white">
-              <h4>Cameron Williamson</h4>
-              <h6>Designer</h6>
+  <div className='container'>
+      <div className="row">
+        <div className="col-lg-6  col-md-10 co-12 d-flex flex-column gap-5 m-auto  px-4 px-sm-4 px-md-5  text-start pt-lg-0 py-3 mx-md-auto ">
+          <Slider {...settings2} className="carousel3">
+       
+            <div className="carousel-item mb-4">
+              <div className="d-flex justify-content-between align-items-center gap-5">
+                <div className="d-flex gap-3 align-items-center justify-content-start">
+                  <img src={image9} alt="profile" className="img-fluid" />
+                  <div className="text-white">
+                    <h4>Cameron Williamson</h4>
+                    <h6>Designer</h6>
+                  </div>
+                </div>
+                <div className="mt-3 mt-md-0">
+                  <img src={group} alt="group icon" />
+                </div>
+              </div>
+              <h5 className="text-white mt-4 fs-6 me-0 me-md-5">
+                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+              </h5>
             </div>
-          </div>
-          <div className="mt-3 mt-md-0">
-            <img src={group} alt="group" />
-          </div>
+
+          
+            <div className="carousel-item mb-4">
+              <div className="d-flex justify-content-between align-items-center gap-5">
+                <div className="d-flex gap-3 align-items-center justify-content-start">
+                  <img src={image9} alt="profile" className="img-fluid" />
+                  <div className="text-white">
+                    <h4>Alex Johnson</h4>
+                    <h6>Project Manager</h6>
+                  </div>
+                </div>
+                <div className="mt-3 mt-md-0">
+                  <img src={group} alt="group icon" />
+                </div>
+              </div>
+              <h5 className="text-white mt-4 fs-6 me-0 me-md-5">
+                Project management and task tracking become easy. Lorem ipsum dolor sit amet consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore.
+              </h5>
+            </div>
+
+         
+          </Slider>
         </div>
 
-        <h5 className="text-white fs-6 me-0 me-md-5">
-          Searches for multiplexes, property comparisons, and the loan estimator. Works great. Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-        </h5>
-
-        <div className="d-flex  justify-content-start gap-0">
-          <button className="btn bg-transparent">
-            <img src={button1} alt="button1" />
-          </button>
-          <button className="btn bg-transparent">
-            <img src={button2} alt="button2" />
-          </button>
+   
+        <div className="col-lg-6 col-12 text-center py-md-5 pt-5 pb-3">
+          <img src={image17} alt="main illustration" className="img-fluid" />
         </div>
       </div>
-
-      <div className="col-lg-6 col-12 text-center py-5">
-        <img src={image17} alt="image17" className="img-fluid" />
       </div>
-      
-    </div>
-  </div>
-</section>
+    </section>
 
-      <section className="container-fluid-lg pt-md-5 pt-3 mt-5">
+
+      <section className="container-fluid-lg pt-md-5 pt-0 mt-5">
   <div>
-    <h1 className="text-center">Have More Questions?</h1>
+    <h1 className="text-center">Hove More Questions?</h1>
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
-  <div className="row justify-content-center pb-md-5 pb-3">
+  <div className="row justify-content-center pb-md-5 pb-0">
   <div className="col-lg-6 col-9 "> 
   <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
@@ -476,7 +580,7 @@ const Main = () => {
   </div>
   </div>
   <div className='container-fluid-lg p-md-5 py-5 px-md-5 px-sm-5 ' style={{background:"#FFF8F6"}}>
-    <div className='d-flex justify-content-between p-md-5 mx-5  flex-md-row flex-column gap-5'>
+    <div className='d-flex justify-content-between p-md-5 mx-5  flex-lg-row flex-column gap-5'>
           <div>
             <h2>Become a Real Estate Agent</h2>
             <h5>We only work with the best companies around the globe</h5>
@@ -493,14 +597,23 @@ const Main = () => {
         <div className="d-flex flex-wrap justify-content-between  border-bottom border-light align-items-center">
           <div className="d-flex gap-3">
             <img src={Vector} alt="logo" className="img-fluid" />
-            <h1>JustHome</h1>
+            <h2>JustHome</h2>
           </div>
           <div className="d-flex align-items-center gap-4">
             <span className='d-flex flex-column pe-4' style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>FollowUs</span>
+            <a href="https://www.facebook.com/">
             <img src={facebook} alt="facebook" className="img-fluid" style={{ width: "24px", height: "24px" }} />
+            </a>
+            <a href="https://www.twitter.com/">
             <img src={twitter} alt="twitter" className="img-fluid" style={{ width: "24px", height: "24px" }} />
+            </a>
+            <a href="https://www.instagram.com/">
             <img src={instagram} alt="instagram" className="img-fluid" style={{ width: "24px", height: "24px" }} />
+
+            </a>
+            <a href="https://www.linkedin.com/">
             <img src={linkedin} alt="linkedin" className="img-fluid" style={{ width: "24px", height: "24px" }} />
+            </a>
           </div>
         </div>
 
@@ -581,10 +694,10 @@ const Main = () => {
 
           <div className="d-flex flex-column gap-3 flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Get The App</h3>
-            <a href="#home">
+            <a href="https://www.apple.com/in/store">
             <img src={applestore} alt="applestore" className="img-fluid" />
             </a>
-            <a href="listings">
+            <a href="https://play.google.com/store/games?device=windows">
             <img src={googlepay} alt="googlepay" className="img-fluid" />
             </a>
           </div>
