@@ -201,8 +201,8 @@ const Main = () => {
        <section className='container-fluid-lg bg-category px-lg-5 px-1 py-md-5 py-5'>
         <div className='  m-md-5  px-md-5 mx-auto  '>
         <div className='d-flex flex-column  mx-md-0 mx-sm-4  mx-3 '>
-            <h2>Featured Categories</h2>
-            <div className='d-flex justify-content-between gap-5'>
+            <h2 className='text-lg-start text-center'>Featured Categories</h2>
+            <div className='d-flex justify-content-between  flex-lg-row flex-column  text-center gap-1 gap-lg-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
               <a href="#home" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
@@ -228,8 +228,8 @@ const Main = () => {
        <section className='container-fluid-lg   px-lg-5 px-1   py-md-5 py-2 ' id="listings">
         <div className='  mx-md-5  px-md-5   py-5'>
         <div className='d-flex flex-column  mx-md-2 mx-sm-4  mx-3'>
-            <h2>Discover Our Best Deals</h2>
-            <div className='d-flex justify-content-between gap-5'>
+            <h2 className='text-lg-start text-center'>Discover Our Best Deals</h2>
+            <div className='d-flex justify-content-between flex-lg-row flex-column  text-center gap-1 gap-lg-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
               <a href="listings" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
@@ -306,8 +306,8 @@ const Main = () => {
 <section className='container-fluid-lg   px-lg-5 px-1' id="blog">
         <div className='  m-md-5 px-md-5  pt-5 '>
         <div className='d-flex flex-column  mx-md-3 mx-sm-4  mx-3'>
-            <h2>Find Properties in These Cities</h2>
-            <div className='d-flex justify-content-between gap-5'>
+            <h2 className='text-lg-start text-center'>Find Properties in These Cities</h2>
+            <div className='d-flex justify-content-between flex-lg-row flex-column  text-center gap-1 gap-lg-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
               <a href="pages" style={{textDecoration:"none",color:"black"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
@@ -348,8 +348,8 @@ const Main = () => {
         <section className='container-fluid-lg px-lg-5 px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
         <div className='  m-md-5 px-md-5 py-md-1 py-3'>
         <div className='d-flex flex-column   mx-md-2 mx-sm-4  mx-3'>
-            <h2>Discover Our Best Deals</h2>
-            <div className='d-flex justify-content-between gap-5'>
+            <h2 className='text-lg-start text-center'>Discover Our Best Deals</h2>
+            <div className='d-flex justify-content-between flex-lg-row flex-column  text-center gap-1 gap-lg-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
               <a href="pages" style={{textDecoration:"none",color:"white"}}>
               <h6>View All Categories <FaArrowRight/> </h6>
