@@ -198,9 +198,9 @@ const Main = () => {
                 ))}
                 </div>
        </section>
-       <section className='container-fluid-lg bg-category px-sm-2 px-1 py-md-5 py-5'>
+       <section className='container-fluid-lg bg-category px-1 py-md-5 py-5'>
         <div className='  m-md-5  px-md-5 mx-auto  '>
-        <div className='d-flex flex-column px-3 '>
+        <div className='d-flex flex-column  mx-md-0 mx-sm-4  mx-3 '>
             <h2>Featured Categories</h2>
             <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -225,9 +225,9 @@ const Main = () => {
 
        </section>
 
-       <section className='container-fluid-lg  px-sm-2 px-0   py-md-5 py-2 ' id="listings">
+       <section className='container-fluid-lg   px-0   py-md-5 py-2 ' id="listings">
         <div className='  mx-md-5  px-md-5   py-5'>
-        <div className='d-flex flex-column px-3 '>
+        <div className='d-flex flex-column  mx-md-0 mx-sm-4  mx-3'>
             <h2>Discover Our Best Deals</h2>
             <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -303,9 +303,9 @@ const Main = () => {
   </div>
  </div>
 </section>
-<section className='container-fluid-lg  px-sm-2 px-1 ' id="blog">
+<section className='container-fluid-lg   px-1 ' id="blog">
         <div className='  m-md-5 px-md-5  pt-5 '>
-        <div className='d-flex flex-column px-3 '>
+        <div className='d-flex flex-column  mx-md-0 mx-sm-4  mx-3'>
             <h2>Find Properties in These Cities</h2>
             <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -345,9 +345,9 @@ const Main = () => {
         </div>
         </div>
         </section>
-        <section className='container-fluid-lg px-sm-2 px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
+        <section className='container-fluid-lg  px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
         <div className='  m-md-5 px-md-5 py-md-1 py-3'>
-        <div className='d-flex flex-column  px-3'>
+        <div className='d-flex flex-column   mx-md-0 mx-sm-4  mx-3'>
             <h2>Discover Our Best Deals</h2>
             <div className='d-flex justify-content-between gap-5'>
               <h6>Lorem ipsum dolor sit amet</h6>
@@ -580,7 +580,7 @@ const Main = () => {
   </div>
   </div>
   <div className='container-fluid-lg p-md-5 py-5 px-md-5 px-2 ' style={{background:"#FFF8F6"}}>
-    <div className='d-flex justify-content-md-between text-center text-lg-start align-items-center p-md-5 mx-5  flex-lg-row flex-column gap-5'>
+    <div className='d-flex justify-content-md-between text-center text-lg-start align-items-center p-md-5 mx-5  flex-lg-row flex-column gap-md-5 gap-2'>
           <div>
             <h2>Become a Real Estate Agent</h2>
             <h5>We only work with the best companies around the globe</h5>
