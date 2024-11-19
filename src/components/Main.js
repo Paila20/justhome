@@ -198,7 +198,7 @@ const Main = () => {
                 ))}
                 </div>
        </section>
-       <section className='container-fluid-lg bg-category px-sm-5 px-1 py-md-5 py-5'>
+       <section className='container-fluid-lg bg-category px-sm-2 px-1 py-md-5 py-5'>
         <div className='  m-md-5  px-md-5 mx-auto  '>
         <div className='d-flex flex-column px-3 '>
             <h2>Featured Categories</h2>
@@ -225,7 +225,7 @@ const Main = () => {
 
        </section>
 
-       <section className='container-fluid-lg  px-sm-5 px-0   py-md-5 py-2 ' id="listings">
+       <section className='container-fluid-lg  px-sm-2 px-0   py-md-5 py-2 ' id="listings">
         <div className='  mx-md-5  px-md-5   py-5'>
         <div className='d-flex flex-column px-3 '>
             <h2>Discover Our Best Deals</h2>
@@ -281,12 +281,12 @@ const Main = () => {
 </section>
 <section className='container-fluid-lg p-2 p-sm-4  mx-md-5 mx-2 my-3 rounded-3 ' style={{background:"#E7C873"}}>
  <div className='d-flex justify-content-between   align-items-center   flex-column flex-lg-row gap-5 py-5 px-lg-5 p-1'>
-  <div className='ps-lg-3 ps-0 ms-0 ms-lg-3'>
+  <div className='ps-lg-3 ps-0 ms-0 ms-lg-3 text-md-start text-center'>
     <h2>Take a look at our numbers</h2>
     <h6>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h6>
 
   </div>
-  <div className='d-flex gap-md-3  gap-2 pe-lg-3  me-lg-3'>
+  <div className='d-flex gap-md-3  gap-2 pe-lg-3  me-lg-3 flex-md-row flex-column text-md-start text-center'>
    
    <div className='d-flex flex-column '>
     <h3>99%</h3>
@@ -303,7 +303,7 @@ const Main = () => {
   </div>
  </div>
 </section>
-<section className='container-fluid-lg  px-sm-5 px-1 ' id="blog">
+<section className='container-fluid-lg  px-sm-2 px-1 ' id="blog">
         <div className='  m-md-5 px-md-5  pt-5 '>
         <div className='d-flex flex-column px-3 '>
             <h2>Find Properties in These Cities</h2>
@@ -345,7 +345,7 @@ const Main = () => {
         </div>
         </div>
         </section>
-        <section className='container-fluid-lg px-sm-5 px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
+        <section className='container-fluid-lg px-sm-2 px-1 py-5' id="pages" style={{background:"#1F4B43",color:"white",paddingTop:"50px"}}>
         <div className='  m-md-5 px-md-5 py-md-1 py-3'>
         <div className='d-flex flex-column  px-3'>
             <h2>Discover Our Best Deals</h2>
@@ -514,7 +514,7 @@ const Main = () => {
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
   <div className="row justify-content-center pb-md-5 pb-0">
-  <div className="col-lg-6 col-9 "> 
+  <div className="col-lg-6 col-11 "> 
   <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
       <h2 className="accordion-header" id="headingOne">
@@ -579,8 +579,8 @@ const Main = () => {
   </div>
   </div>
   </div>
-  <div className='container-fluid-lg p-md-5 py-5 px-md-5 px-sm-5 ' style={{background:"#FFF8F6"}}>
-    <div className='d-flex justify-content-between p-md-5 mx-5  flex-lg-row flex-column gap-5'>
+  <div className='container-fluid-lg p-md-5 py-5 px-md-5 px-2 ' style={{background:"#FFF8F6"}}>
+    <div className='d-flex justify-content-md-between text-center text-lg-start align-items-center p-md-5 mx-5  flex-lg-row flex-column gap-5'>
           <div>
             <h2>Become a Real Estate Agent</h2>
             <h5>We only work with the best companies around the globe</h5>
@@ -593,8 +593,8 @@ const Main = () => {
 </section>
 
 <section className="container-fluid px-md-5 px-1 pt-4 pt-sm-0 " style={{ background: "#1F4B43", color: "white" }} id="contact">
-      <div className="d-flex flex-column px-5 ">
-        <div className="d-flex flex-wrap justify-content-between  border-bottom border-light align-items-center">
+      <div className="d-flex flex-column px-md-5 px-2 ">
+        <div className="d-flex flex-wrap justify-content-md-between  border-bottom border-light  justify-content-center align-items-center gap-3">
           <div className="d-flex gap-3">
             <img src={Vector} alt="logo" className="img-fluid" />
             <h2>JustHome</h2>
@@ -617,7 +617,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="d-flex flex-wrap flex-lg-nowrap gap-5 mx-auto my-5 pb-5 border-bottom border-light" id="contact">
+        <div className="d-flex flex-wrap flex-lg-nowrap gap-5 mx-auto my-5 pb-5 border-bottom border-light justify-content-center " id="contact">
           <div className="flex-grow-1">
             <h3 className="fs-5 " style={{color:"gray"}}>Subscribe</h3>
             <div className="d-flex justify-content-between  pb-2">

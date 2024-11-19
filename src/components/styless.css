@@ -17,7 +17,7 @@
 }
 
 
-
+/* 
 .content{
   position: absolute;
   top: 50%;
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: flex-start; 
   align-items: center;
-}
+} */
 .carousel3 .slick-next:before {
   content: unset;
 }
@@ -166,7 +166,7 @@ box-shadow: none;
   font-size: 0.7rem;
 }
 .fs-7{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .card-bg{
   background:  #1F4B43;
@@ -238,7 +238,9 @@ box-shadow: none;
     text-align: left;
   }
   .bottom-menu{
-    margin-left: 2rem;
+    margin-left: 4rem;
+    gap:1rem;
+    align-items: center;
   }
   .header-h6{
     font-size: 0.6rem;
@@ -258,18 +260,18 @@ box-shadow: none;
 
 
 @media screen and (max-width: 680px) {
-  .bottom-menu{
+  /* .bottom-menu{
    
     align-items:center;
     gap: 1rem;
 
-  }
+  } */
   .type{
     display: inline;
   }
  
 
-  .header-h6{
+  /* .header-h6{
     font-size: 0.4rem;
   }
   .guide-button{
@@ -285,7 +287,7 @@ box-shadow: none;
   .view{
     font-size: 0.6rem;
     margin-left: 5px;
-  }
+  } */
 }
   
   @media screen and (max-width: 400px) {
@@ -295,7 +297,7 @@ box-shadow: none;
       align-items:baseline;
       gap: 1rem;
     }
-    .header-h6{
+    /* .header-h6{
       font-size: 0.3rem;
     }
     .guide-button{
@@ -311,5 +313,5 @@ box-shadow: none;
     .propertyimage{
       display: none;
       
-    }
+    } */
   }
