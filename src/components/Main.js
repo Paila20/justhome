@@ -514,7 +514,7 @@ const Main = () => {
     <h6 className="text-center fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing</h6>
   </div>
   <div className="row justify-content-center pb-md-5 pb-0">
-  <div className="col-lg-6 col-11 "> 
+  <div className="col-lg-6 col-md-8 col-11 "> 
   <div className="accordion border-0  mx-auto mt-4 mb-5 " id="accordionExample">
     <div className="accordion-item border-0">
       <h2 className="accordion-header" id="headingOne">
