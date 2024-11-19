@@ -218,7 +218,7 @@ const Header = () => {
         }}
       >
         <a className="navbar-brand" href="#homepage">
-          <div className="d-flex gap-3 align-items-center ps-sm-5 ps-3 logo">
+          <div className="d-flex gap-3 align-items-center ps-sm-5 ps-5 logo">
             <img src={Vector} alt="Logo" style={{ width: "40px", height: "40px" }} />
             JustHome
           </div>
@@ -238,7 +238,7 @@ const Header = () => {
         </button>
 
         <div className="collapse navbar-collapse ul-bg" id="navbarContent">
-          <ul className="navbar-nav me-auto ms-5 gap-lg-1 color-white ul-menu ps-sm-5 ps-5">
+          <ul className="navbar-nav me-auto ms-5 gap-lg-1 color-white ul-menu ps-sm-5 ps-0">
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -297,7 +297,7 @@ const Header = () => {
             {/* Add other nav items similarly */}
           </ul>
 
-          <div className="d-flex align-items-md-center px-sm-5 pe-md-5 ps-5 bottom-menu">
+          <div className="d-flex align-items-md-center px-sm-5 pe-md-5 ps-sm-0 ps-0 bottom-menu">
             <a
               href="#contact"
               className="text-white mx-lg-2 mx-md-0"
